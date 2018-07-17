@@ -3,4 +3,5 @@ lib-y	+= memcpy.o
 lib-y	+= memset.o
 lib-y	+= uaccess.o
 
+lib-$(CONFIG_32BIT) += ucmpdi2.o
 lib-$(CONFIG_32BIT) += udivdi3.o

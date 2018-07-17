@@ -49,8 +49,9 @@ config MMU
 	def_bool y
 
 config ZONE_DMA32
-	bool
-	default y if 64BIT
+	def_bool y
+#	bool
+#	default y if 64BIT
 
 config PAGE_OFFSET
 	hex
@@ -107,6 +108,8 @@ config ARCH_RV32I
 	select GENERIC_LIB_ASHLDI3
 	select GENERIC_LIB_ASHRDI3
 	select GENERIC_LIB_LSHRDI3
+#custom
+	select SWIOTLB
 
 config ARCH_RV64I
 	bool "RV64I"
